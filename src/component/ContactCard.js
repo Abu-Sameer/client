@@ -2,7 +2,7 @@ import React from 'react';
 import user from '../images/user.png';
 
 const ContactCard = (props) => {
-  const { name, number, email } = props.contact;
+  const { name, number, email, address } = props.contact;
   return (
     <div className="cool">
       <img
@@ -11,19 +11,20 @@ const ContactCard = (props) => {
         alt="user"
         style={{ scale: '100%', width: '50px' }}
       />
-      <div className="content">
-        <h4 className="header">{name}</h4>
-        <div style={{ marginTop: '-15px' }}>{number}</div>
-        <div>{email}</div>
-      </div>
-      <i
+      <div className="content"></div>
+      <ul
         className="trash alternate outline icon"
         style={{
-          color: 'red',
+          color: 'gray',
           marginTop: '5px',
           marginBottom: '10px',
         }}
-      ></i>
+      >
+        <li>Fullname: {name}</li>
+        <li>Phone Number: {number}</li>
+        <li>Current Address: {address}</li>
+        <li>Email Address: {email}</li>
+      </ul>
     </div>
   );
 };

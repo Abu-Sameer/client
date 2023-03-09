@@ -5,6 +5,7 @@ export default function AddContact(props) {
     name: '',
     number: '',
     email: '',
+    address: '',
   });
 
   function handleChange(e) {
@@ -18,13 +19,18 @@ export default function AddContact(props) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (state.name === '' || state.number === '' || state.email === '') {
+    if (
+      state.name === '' ||
+      state.number === '' ||
+      state.email === '' ||
+      state.address === ''
+    ) {
       alert('All values are Mondatory!');
       return;
     }
 
     props.addContactHandler(state);
-    setState({ name: '', email: '', number: '' });
+    setState({ name: '', email: '', number: '', address: '' });
   }
 
   return (
@@ -34,6 +40,7 @@ export default function AddContact(props) {
         <div className="field">
           <label>Full Name</label>
           <input
+            className="name"
             type="text"
             name="name"
             placeholder="Enter your fullname"
@@ -48,6 +55,16 @@ export default function AddContact(props) {
             name="number"
             placeholder="Phone Number"
             value={state.number}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="field">
+          <label>Address</label>
+          <input
+            type="text"
+            name="address"
+            placeholder="Entert your address"
+            value={state.address}
             onChange={handleChange}
           />
         </div>
