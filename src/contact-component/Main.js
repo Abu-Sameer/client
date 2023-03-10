@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import AddContact from './AddContact';
 import ContactList from './ContactList';
+import './Main.css';
 
 function Main() {
   const LOCAL = 'contacts';
@@ -29,7 +30,7 @@ function Main() {
   }
 
   return (
-    <div className="ui containter">
+    <div className="ui-containter">
       <Header />
       <AddContact addContactHandler={addContactHandler} />
       {call || <ContactList contacts={contacts} />}

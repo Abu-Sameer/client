@@ -34,7 +34,7 @@ export default function AddContact(props) {
   }
 
   return (
-    <div className="ui main">
+    <div className="ui-main">
       <h2>Add Contact</h2>
       <form className="ui form" onSubmit={handleSubmit}>
         <div className="field">
@@ -46,6 +46,7 @@ export default function AddContact(props) {
             placeholder="Enter your fullname"
             value={state.name}
             onChange={handleChange}
+            autoFocus
           />
         </div>
         <div className="field">

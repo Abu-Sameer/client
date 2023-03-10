@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: 'ubuntu', sans-serif;
+}
+
+.ui-containter {
+  border: 3px solid maroon;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: deepskyblue;
+  width: 500px;
+}
+
+.ui-container-center {
+  text-align: center;
+  color: navy;
+  text-transform: uppercase;
+}
+
+.ui-main {
+  border: 2px solid mediumvioletred;
+  border-radius: 5px;
+  padding: 10px 20px 10px 10px;
+  margin-top: 10px;
+}
+
+.ui-main h2 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: blue;
+}
+
+.field input {
+  width: 100%;
+  margin-bottom: 5px;
+  height: 20px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 2px solid lightslategrey;
+  outline: none;
+}
+
+form button {
+  border: 2px solid lightseagreen;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-map h3 {
+  margin: 10px 0 -5px 10px;
+  text-transform: uppercase;
+  color: darkblue;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.contact-card {
+  border: 2px solid lightslategrey;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: teal;
+}
+
+.contact-card img {
+  scale: 100%;
+  width: 50px;
+}
+
+.contact-card ul {
+  color: white;
+  margin-top: 15px;
+  padding: 0 0 10px 20px;
+}
