@@ -2,11 +2,13 @@ import React from 'react';
 import user from '../images/user.png';
 
 const ContactCard = (props) => {
-  const { name, number, email, address } = props.contact;
+  const { id, name, number, email, address } = props.contact;
   return (
     <div className="contact-card">
-      <img className="ui mine" src={user} alt="user" />
-      <div className="content"></div>
+      <div className="content">
+        <img className="ui mine" src={user} alt="user" />
+        <i onClick={() => props.handledel(id)} className="fas fa-trash"></i>
+      </div>
       <ul>
         <li>Fullname: {name}</li>
         <li>Phone Number: {number}</li>

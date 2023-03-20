@@ -11,6 +11,17 @@ body {
   font-family: 'ubuntu', sans-serif;
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content i {
+  padding: 10px;
+  color: red;
+  font-size: 17px;
+}
+
 .ui-containter {
   border: 3px solid maroon;
   border-radius: 5px;
@@ -82,4 +93,14 @@ form button {
   color: white;
   margin-top: 15px;
   padding: 0 0 10px 20px;
+}
+
+.btn {
+  padding: 5px 10px;
+  margin-left: 15px;
+  background-color: darkblue;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
 }

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
 export default function AddContact(props) {
@@ -41,6 +42,7 @@ export default function AddContact(props) {
           <label>Full Name</label>
           <input
             className="name"
+            required
             type="text"
             name="name"
             placeholder="Enter your fullname"
@@ -52,8 +54,9 @@ export default function AddContact(props) {
         <div className="field">
           <label>Phone Number</label>
           <input
-            type="number"
+            type="text"
             name="number"
+            required
             placeholder="Phone Number"
             value={state.number}
             onChange={handleChange}
@@ -63,6 +66,7 @@ export default function AddContact(props) {
           <label>Address</label>
           <input
             type="text"
+            required
             name="address"
             placeholder="Entert your address"
             value={state.address}
@@ -73,13 +77,16 @@ export default function AddContact(props) {
           <label>Email Address</label>
           <input
             type="text"
+            required
             name="email"
             placeholder="Email"
             value={state.email}
             onChange={handleChange}
           />
         </div>
-        <button className="ui button purple">Add Contact</button>
+        <Link to="/list">
+          <button className="ui button purple">Add to list</button>
+        </Link>
       </form>
     </div>
   );
