@@ -4,6 +4,7 @@ import store from './newComponent/store/Store';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddContact from './newComponent/features/AddContact';
 import ContactList from './newComponent/features/ContactList';
+import EditContact from './newComponent/features/EditContact';
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
         <Router>
           <Routes>
             <Route index element={<ContactList />} />
-            <Route path="list" element={<AddContact />} />
+            <Route path="contact">
+              <Route index element={<AddContact />} />
+              <Route path=":contactId" element={<EditContact />} />
+            </Route>
           </Routes>
         </Router>
       </Provider>

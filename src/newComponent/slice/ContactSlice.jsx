@@ -30,11 +30,15 @@ const ContactSlices = createSlice({
     updateContact(state, action) {
       const { id } = action.payload;
       const contact = state.filter((contact) => contact.id !== id);
-      state = [...contact, action.payload];
+      return [...contact, action.payload];
     },
   },
 });
 
+export const selectContactById = (state, contactId) =>
+  state.contacts.find((contact) => contact.id === contactId);
+
 export const { addContact, deleteContact, updateContact } =
   ContactSlices.actions;
+
 export default ContactSlices.reducer;

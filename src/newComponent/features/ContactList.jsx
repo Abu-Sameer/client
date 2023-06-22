@@ -10,7 +10,7 @@ const ContactList = () => {
     <div className="bg-success rounded p-3 mb-5">
       <Link
         style={{ color: 'white', textDecoration: 'none' }}
-        to="list"
+        to="contact"
       >{`==> Goto Contact Form`}</Link>
       <h2 className="text-center text-light">Contact Card</h2>
       <>
