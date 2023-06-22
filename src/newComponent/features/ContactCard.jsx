@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import user from '../../images/user.png';
 import { useDispatch } from 'react-redux';
 import { deleteContact, updateContact } from '../slice/ContactSlice';
-import { Link } from 'react-router-dom';
 
 const ContactCard = ({ contact }) => {
   const [edit, setEdit] = useState(false);
@@ -79,10 +78,10 @@ const ContactCard = ({ contact }) => {
           <div className="text-center">
             <button className="btn btn-primary my-3">Save</button>
           </div>
-          <Link
-            style={{ textDecoration: 'none', color: 'inherit' }}
-            to="/"
-          >{`<== Contact list`}</Link>
+          <div
+            style={{ cursor: 'pointer' }}
+            onClick={() => setEdit(false)}
+          >{`<== Contact list`}</div>
         </form>
       ) : (
         <div className="col-md-6">
